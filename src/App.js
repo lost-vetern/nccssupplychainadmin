@@ -12,7 +12,7 @@ function App() {
         </label>
 
         <label>
-          Diamond Description:
+          Description:
           <input type="text" name="name" />
         </label>
         
