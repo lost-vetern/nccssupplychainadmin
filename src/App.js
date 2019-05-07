@@ -5,19 +5,37 @@ import './App.css';
 class App extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {value: ''};
-  
-      this.handleChange = this.handleChange.bind(this);
+      this.state = {
+        name: '',
+        desc: ''
+      };
+
       this.handleSubmit = this.handleSubmit.bind(this);
     }
   
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-  
     handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
-      event.preventDefault();
+        fetch('http://51.15.60.180/api/Commodity', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              $class: 'org.example.mynetwork.Commodity',
+              tradingSymbol: this.state.name,
+              description: this.state.desc,
+              mainExchange: 'Dollar',
+              quantity: '1',
+              owner: 'resource:org.example.mynetwork.Trader#procurement',
+            })
+        })
+        .then((resp)=>{
+            console.log(resp);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+        event.preventDefault();
     }
   
     render() {
@@ -25,7 +43,11 @@ class App extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" value={this.state.name} onChange={(text)=> this.setState({name: text.target.value})} />
+          </label>
+          <label>
+            Description:
+            <input type="text" value={this.state.desc} onChange={(text)=> this.setState({desc: text.target.value})} />
           </label>
           <input type="submit" value="Submit" />
         </form>
