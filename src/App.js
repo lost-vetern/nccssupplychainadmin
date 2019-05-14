@@ -114,7 +114,9 @@ class App extends React.Component {
                 </Grid>
                 
             </Grid>
-            <a style={{marginTop: '50'}} href="http://www.google.com"><h4>List all diamonds</h4></a>
+            <div className="Center-Div">
+                <a className="No-Underline" style={{marginTop: '50', color: '#3f51b5'}} href="http://www.google.com"><h2>List all diamonds</h2></a>
+            </div>
             {/* <MList items={this.state.diamonds} /> */}
         </div>
       );
