@@ -9,6 +9,7 @@
     "react-dom": "^16.8.6",
     "react-list": "^0.8.11",
     "react-materialize": "^3.2.2",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
     "typeface-roboto": "^0.0.54"
   },
