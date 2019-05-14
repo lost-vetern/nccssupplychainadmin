@@ -15,7 +15,7 @@ const MList = props => (
             <img className={"Image-Fit"} src={"https://clic-ctsa.org/sites/default/files/003-diamond2.png"} alt={item.tradingSymbol} />
             <GridListTileBar
               title={item.tradingSymbol}
-              subtitle={<span>by: {item.description}</span>}
+              subtitle={<span>{item.description}</span>}
               actionIcon={
                 <IconButton style={{color: 'rgba(255, 255, 255, 0.54)'}}>
                   <Link style={{color: 'rgba(255, 255, 255, 0.54)'}} to="/users/"><InfoIcon /></Link>

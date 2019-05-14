@@ -1,11 +1,6 @@
 import React from 'react';
 import './App.css';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
 import MList from './List';
-import logo from './logo.svg';
-import { Link } from "react-router-dom";
 
 
 class DiamondsPage extends React.Component {
@@ -41,7 +36,7 @@ class DiamondsPage extends React.Component {
   
     render() {
       return (
-        <div className="Center-Div" style={{ padding:20, height: '100vh' }}>
+        <div className="Center-Div" style={{ padding:20, height: '95vh' }}>
             <MList items={this.state.diamonds} />
         </div>
       );
