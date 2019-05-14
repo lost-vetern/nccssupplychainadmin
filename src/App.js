@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import MList from './List';
+import logo from './logo.svg';
 
 
 class App extends React.Component {
@@ -80,7 +81,10 @@ class App extends React.Component {
             direction="column"
             justify="center"
             alignItems="center">
+                <img style={{ height: '20%' }} src={logo} alt="Logo" />
                 <h1>Add new diamond</h1>
+                
+                
                 <Grid
                 spacing={24}
                 container
