@@ -41,7 +41,7 @@ class DiamondsPage extends React.Component {
   
     render() {
       return (
-        <div style={{ padding:20 }}>
+        <div className="Center-Div" style={{ padding:20, height: '100vh' }}>
             <MList items={this.state.diamonds} />
         </div>
       );

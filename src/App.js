@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import IndexPage from "./IndexPage";
 import DiamondsPage from "./DiamondsPage";
 
@@ -19,7 +19,7 @@ function AppRouter() {
     return (
       <Router>
         <div>
-          <nav>
+          {/* <nav>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -31,7 +31,7 @@ function AppRouter() {
                 <Link to="/users/">Users</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
   
           <Route path="/" exact component={Index} />
           <Route path="/diamonds/" component={Diamonds} />

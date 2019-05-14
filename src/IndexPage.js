@@ -120,7 +120,7 @@ class IndexPage extends React.Component {
                 
             </Grid>
             <div className="Center-Div">
-                <Link className="No-Underline" style={{marginTop: '50', color: '#3f51b5'}} to="/about/"><h2>List all diamonds</h2></Link>
+                <Link className="No-Underline" style={{marginTop: '50', color: '#3f51b5'}} to="/diamonds/"><h2>List all diamonds</h2></Link>
             </div>
             {/* <MList items={this.state.diamonds} /> */}
         </div>

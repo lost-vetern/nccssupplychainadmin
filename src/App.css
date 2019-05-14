@@ -14,6 +14,12 @@ body > #root > div {
     align-items: center;
 }
 
+.Image-Fit{
+    top: 25% !important;
+    width: 50% !important;
+    left: 25% !important;
+}
+
 .No-Underline{
     text-decoration: none;
 }
